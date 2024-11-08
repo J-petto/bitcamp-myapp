@@ -27,6 +27,8 @@ public class ServerApp implements WebMvcConfigurer {
   @Autowired
   ApplicationContext appCtx;
 
+  string 100 = 1;
+
   public ServerApp() {
     // AWS 경고 메시지 로깅 비활성화
     System.getProperties().setProperty("aws.java.v1.disableDeprecationAnnouncement", "true");
