@@ -20,14 +20,12 @@ import java.util.List;
 @SpringBootApplication
 @PropertySource("file:${user.home}/config/ncp.properties")
 @EnableTransactionManagement
-//@EnableWebMvc  -> 자동 설정 비활성화 태그.
+// @EnableWebMvc -> 자동 설정 비활성화 태그.
 @Controller
 public class ServerApp implements WebMvcConfigurer {
 
   @Autowired
   ApplicationContext appCtx;
-
-  string 100 = 1;
 
   public ServerApp() {
     // AWS 경고 메시지 로깅 비활성화
@@ -40,7 +38,7 @@ public class ServerApp implements WebMvcConfigurer {
 
   @GetMapping("/hello")
   @ResponseBody
-  public String hello(){
+  public String hello() {
     return "Hello World!";
   }
 
